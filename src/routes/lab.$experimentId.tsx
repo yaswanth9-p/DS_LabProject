@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from '@tanstack/react-router';
 import { useState } from 'react';
 import { ArrowLeft, Copy, Check, CalendarDays } from 'lucide-react';
-import Prism from 'prismjs';
+import Prism from '@/lib/code-highlighting';
 import { Button } from '@/components/ui/button';
 import { Status } from '@/components/portal/shared';
 import { pageHead, usePortal, readableDate } from '@/data/portal';
