@@ -10,33 +10,73 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ProfileRouteImport } from './routes/profile'
+import { Route as SocialRouteImport } from './routes/social'
+import { Route as LabIndexRouteImport } from './routes/lab.index'
+import { Route as LabExperimentIdRouteImport } from './routes/lab.$experimentId'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ProfileRoute = ProfileRouteImport.update({
+  id: '/profile',
+  path: '/profile',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SocialRoute = SocialRouteImport.update({
+  id: '/social',
+  path: '/social',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LabIndexRoute = LabIndexRouteImport.update({
+  id: '/lab/',
+  path: '/lab/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LabExperimentIdRoute = LabExperimentIdRouteImport.update({
+  id: '/lab/$experimentId',
+  path: '/lab/$experimentId',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/profile': typeof ProfileRoute
+  '/social': typeof SocialRoute
+  '/lab/$experimentId': typeof LabExperimentIdRoute
+  '/lab/': typeof LabIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/profile': typeof ProfileRoute
+  '/social': typeof SocialRoute
+  '/lab/$experimentId': typeof LabExperimentIdRoute
+  '/lab': typeof LabIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/profile': typeof ProfileRoute
+  '/social': typeof SocialRoute
+  '/lab/$experimentId': typeof LabExperimentIdRoute
+  '/lab/': typeof LabIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/profile' | '/social' | '/lab/$experimentId' | '/lab/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/profile' | '/social' | '/lab/$experimentId' | '/lab'
+  id: '__root__' | '/' | '/profile' | '/social' | '/lab/$experimentId' | '/lab/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ProfileRoute: typeof ProfileRoute
+  SocialRoute: typeof SocialRoute
+  LabExperimentIdRoute: typeof LabExperimentIdRoute
+  LabIndexRoute: typeof LabIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +88,43 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/profile': {
+      id: '/profile'
+      path: '/profile'
+      fullPath: '/profile'
+      preLoaderRoute: typeof ProfileRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/social': {
+      id: '/social'
+      path: '/social'
+      fullPath: '/social'
+      preLoaderRoute: typeof SocialRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/lab/': {
+      id: '/lab/'
+      path: '/lab'
+      fullPath: '/lab/'
+      preLoaderRoute: typeof LabIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/lab/$experimentId': {
+      id: '/lab/$experimentId'
+      path: '/lab/$experimentId'
+      fullPath: '/lab/$experimentId'
+      preLoaderRoute: typeof LabExperimentIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ProfileRoute: ProfileRoute,
+  SocialRoute: SocialRoute,
+  LabExperimentIdRoute: LabExperimentIdRoute,
+  LabIndexRoute: LabIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

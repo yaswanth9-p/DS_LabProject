@@ -8,3 +8,8 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+## Portal architecture
+- Use TanStack file routes for Home, Lab, Profile, Social and experiment details so each view is independently navigable.
+- Keep student information, experiments and theme in a shared browser-persisted React provider; hydrate storage after mount to preserve SSR consistency.
+- Define the portal's appearance in the global semantic design system and reuse accessible Button and Dialog components.
