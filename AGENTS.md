@@ -13,3 +13,5 @@
 - Use TanStack file routes for Home, Lab, Profile, Social and experiment details so each view is independently navigable.
 - Keep student information, experiments and theme in a shared browser-persisted React provider; hydrate storage after mount to preserve SSR consistency.
 - Define the portal's appearance in the global semantic design system and reuse accessible Button and Dialog components.
+- Keep reference experiment records in a browser-safe seed module; merge updated defaults with saved custom records and replace only legacy demo entries so user-added work survives content updates.
+- Store supplied photos and official university branding as CDN asset pointers; derive the public favicon from the same official logo source.
