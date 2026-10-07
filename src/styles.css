@@ -34,3 +34,12 @@ button, a[data-slot="button"] { transition: transform .2s, background .2s; } but
 @media(prefers-reduced-motion:reduce) { *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }
 
 .portal-dialog-overlay { background: var(--overlay); backdrop-filter: blur(7px); }
+.university-logo { width: 64px; height: 46px; flex-shrink: 0; display: grid; place-items: center; border-radius: 6px; background: var(--primary-foreground); padding: 4px; }
+.university-logo img { width: 100%; height: 100%; object-fit: contain; }
+.identity-logo { width: 48px; height: 32px; object-fit: contain; background: var(--primary-foreground); border-radius: 4px; padding: 3px; }
+.identity-person .avatar { width: 88px; height: 104px; border-radius: 8px; }
+.identity-person .avatar img { border-radius: 8px; object-position: 58% 30%; }
+.identity-person .avatar-status { display: none; }
+.identity-top .eyebrow { min-width: 0; }
+.github-card .social-icon { background: var(--secondary); color: var(--foreground); }
+@media(max-width:640px) { .university-logo { width: 48px; height: 36px; } .identity-person { gap: 13px; } }
