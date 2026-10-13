@@ -3,7 +3,8 @@
 - [x] Add editable student/academic profile and social links.
 - [x] Build persistent experiment dashboard, add form and detail view.
 - [x] Verify navigation, persistence, theme and mobile layout.
-- [ ] Add Yaswanth’s student details, photo and GitHub/LinkedIn.
-- [ ] Replace the placeholder with a verified official university logo.
-- [ ] Import experiments from the supplied reference without copying its design.
-- [ ] Verify updated cards, experiment details and saved information.
+- [x] Add Yaswanth’s student details, photo and GitHub/LinkedIn.
+- [x] Replace the placeholder with a verified official university logo.
+- [ ] Add uploaded Data Science Programs 4–6 and retain saved student experiments.
+- [ ] Apply the stadium-inspired home background and center the provided MBU logo.
+- [ ] Verify the updated experiment list, logo, responsive hero and saved information.
