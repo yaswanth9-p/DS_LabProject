@@ -15,3 +15,4 @@
 - Define the portal's appearance in the global semantic design system and reuse accessible Button and Dialog components.
 - Keep reference experiment records in a browser-safe seed module; merge updated defaults with saved custom records and replace only legacy demo entries so user-added work survives content updates.
 - Store supplied photos and official university branding as CDN asset pointers; derive the public favicon from the same official logo source.
+- Keep home-hero parallax confined to its CSS background layer, updating only CSS variables from pointer input so foreground content stays stable without a rendering library.
