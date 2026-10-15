@@ -5,6 +5,7 @@
 - [x] Verify navigation, persistence, theme and mobile layout.
 - [x] Add Yaswanth’s student details, photo and GitHub/LinkedIn.
 - [x] Replace the placeholder with a verified official university logo.
-- [ ] Add uploaded Data Science Programs 4–6 and retain saved student experiments.
-- [ ] Apply the stadium-inspired home background and center the provided MBU logo.
-- [ ] Verify the updated experiment list, logo, responsive hero and saved information.
+- [ ] Replace the home hero background with the supplied Sung Jin-Woo image.
+- [ ] Add subtle, responsive background-only parallax and floating motion; respect reduced motion.
+- [ ] Use Orbitron for headings and Inter for body text, buttons, forms and general content.
+- [ ] Verify readability, responsive behavior, existing portal content, and the preview build.
